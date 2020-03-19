@@ -1,0 +1,108 @@
+#tableBody {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid black; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+   
+  }
+  #tableBody th, #tableBody td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+  }
+  #tableBody tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #tableBody tr.header, #tableBody tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+  }  
+  body{
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+
+}
+
+.header{
+    color: indianred;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.firstDiv{
+    margin: 0 auto;
+    color: white;
+    background-color: indianred;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.macedonia{
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 700;
+    font-size: xx-large;
+    margin: 30xp;
+    padding: 20px;
+}
+
+.macedoniaNumbers{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.macedoniaNumbers.div{
+    display: inline-flex;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.simptomi{
+    font-weight: 700;
+    font-size: xx-large;
+    color: indianred;
+    margin-left: 20px;
+}
+
+.simptomiTekst{
+    color: indianred;
+    margin-left: 20px;
+}
+
+.preporaka{
+    color: indianred;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.merki{
+    font-weight: 700;
+    font-size: xx-large;
+    color: indianred;
+    margin-left: 20px;
+}
+
+.merkiZaZastita{
+    color: indianred;
+    margin-left: 20px;
+}
+
+
+.nav-pills .nav-link.active {
+    background-color: indianred !important;
+    color: white !important;
+}
+
+.nav-pills .nav-link  {
+    background-color: white !important;
+    color: indianred !important;
+}
