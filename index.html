@@ -74,38 +74,54 @@
             </div>
           </div>
         </div>
-        <div>
-          <ul class="nav nav-pills  mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active simptomi" id="pills-podatoci-tab" data-toggle="pill" href="#pills-podatoci" role="tab"
-                aria-controls="pills-podatoci" aria-selected="true">Податоци</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link simptomi" id="pills-simptomi-tab" data-toggle="pill" href="#pills-simptomi" role="tab"
-                aria-controls="pills-simptomi" aria-selected="false">Симптоми</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link merki" id="pills-merki-tab" data-toggle="pill" href="#pills-merki" role="tab"
-                aria-controls="pills-merki" aria-selected="false">Мерки за заштита</a>
-            </li>
-          </ul>
-  
-          <div class="tab-pane fade show active simptomiTekst" id="pills-podatoci" role="tabpanel"
-            aria-labelledby="pills-podatoci-tab">
-            <input id="myInput" type="text" onkeyup="myFunction()" placeholder="Search.." name="search"
-              style="border: 1px solid black">
-  
-            <table id="tableBody" >
-              <tr class="header">
-                <th style="width:40%;">Country</th>
-                <th style="width:40%;">Cases</th>
-                <th style="width:40%;">Deths</th>
-              </tr>
-  
+
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active navs" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+              aria-controls="pills-home" aria-selected="true">Податоци</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navs" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+              aria-controls="pills-profile" aria-selected="false">Симптоми</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navs" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+              aria-controls="pills-contact" aria-selected="false">Мерки за заштита</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navs" id="pills-sliki-tab" data-toggle="pill" href="#pills-sliki" role="tab"
+              aria-controls="pills-sliki" aria-selected="false">Правилна Само-изолација</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navs" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab"
+              aria-controls="pills-video" aria-selected="false">Корисни Видеа</a>
+          </li>
+          
+        </ul>
+        <div class="tab-content  align-middle" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <input id="myInput" type="text" onkeyup="myFunction()" placeholder="Пребарај по држава" name="search"
+              class="form-control mb-3 w-50">
+
+            <table id="tableBody" class="table align-middle">
+              <thead class="thead-dark align-middle">
+                <tr>
+                  <th style="width:40%;" scope="col">Држава</th>
+                  <th style="width:40%;" scope="col">Заболени</th>
+                  <th style="width:40%;" scope="col">Денешни Заболени</th>
+                  <th style="width:40%;" scope="col">Починати</th>
+                  <th style="width:40%;" scope="col">Денешни Починати</th>                  
+                  <th style="width:40%;" scope="col">Излечени</th>
+                  <th style="width:40%;" scope="col">Активни</th>
+                  <th style="width:40%;" scope="col">Критични</th>
+                </tr>
+              </thead>
+
+
             </table>
           </div>
-          <div class="tab-pane fade simptomiTekst" id="pills-simptomi" role="tabpanel"
-            aria-labelledby="pills-simptomi-tab">
+          <div class="tab-pane fade simptomiTekst" id="pills-profile" role="tabpanel"
+            aria-labelledby="pills-profile-tab">
             Најчести симптоми на COVID-19 се треска, замор и сува кашлица.
             Некои пациенти може да имаат болки, назална преоптовареност,
             течење на носот, болки во грлото или дијареја. Овие симптоми
@@ -123,7 +139,8 @@
               бидеме одговорни и да се придржуваме кон препораките на експертите.
             </div>
           </div>
-          <div class="tab-pane fade merkiZaZastita" id="pills-merki" role="tabpanel" aria-labelledby="pills-merki-tab">
+          <div class="tab-pane fade merkiZaZastita" id="pills-contact" role="tabpanel"
+            aria-labelledby="pills-contact-tab">
             Грижете се за вашето здравје и заштитувајте ги другите со правење на следново: <br>
             * Често мијте ги рацете со дезинфицирачи со основа на алкохол или мијте ги со сапун и вода. <br>
             Зошто?<br>
@@ -157,20 +174,84 @@
             установа.
             Ова исто така ќе ве заштити вас и ќе помогне да се спречи ширењето на вируси и други зарази.
           </div>
+          <div class="tab-pane fade merkiZaZastita" id="pills-sliki" role="tabpanel"
+            aria-labelledby="pills-sliki-tab">
+            <div class="row row-cols-1 row-cols-md-3 mb-5">
+              <div class="col mb-3">
+                <img src="https://scontent.fskg1-2.fna.fbcdn.net/v/t1.0-9/90717181_2340882469552106_4209901852340256768_n.jpg?_nc_cat=101&_nc_sid=8024bb&_nc_ohc=R7-uU0GW15MAX8jxe-l&_nc_ht=scontent.fskg1-2.fna&oh=c74ab1699b8e17d8bb8338ee10b4959b&oe=5E9BDF96" class="card-img-top" alt="...">
+                
+              </div>
+              <div class="col mb-3">
+                <img src="https://scontent.fskg1-1.fna.fbcdn.net/v/t1.0-9/90531418_2341504752823211_762466770756829184_n.jpg?_nc_cat=1&_nc_sid=8024bb&_nc_ohc=HrFh6gm5T0EAX9kAnZh&_nc_ht=scontent.fskg1-1.fna&oh=eabfe944bba0fbaccc73cec690a5d842&oe=5E9B96B9" class="card-img-top" alt="...">
+                
+              </div>
+              <div class="col mb-3">
+                <img src="https://scontent.fskg1-1.fna.fbcdn.net/v/t1.0-9/90524961_2341504809489872_6151862046687232000_n.jpg?_nc_cat=1&_nc_sid=8024bb&_nc_ohc=cYvKPsysKkcAX8xVkZJ&_nc_ht=scontent.fskg1-1.fna&oh=297232c3b2e9df5037c8abb879d59247&oe=5E9AE962" class="card-img-top" alt="...">
+                
+              </div>
+              <div class="col mb-3">
+                <img src="https://scontent.fskg1-1.fna.fbcdn.net/v/t1.0-9/90438862_2341504886156531_429612577752875008_n.jpg?_nc_cat=1&_nc_sid=8024bb&_nc_ohc=_sXn11vSoSoAX8PX-LM&_nc_ht=scontent.fskg1-1.fna&oh=baf9b4f36db0efda8e65728861e34a1a&oe=5E9BCA5A" class="card-img-top" alt="...">
+                
+              </div>
+              <div class="col mb-3">
+                <img src="https://scontent.fskg1-1.fna.fbcdn.net/v/t1.0-9/90302383_2341504816156538_4911658736382115840_n.jpg?_nc_cat=1&_nc_sid=8024bb&_nc_ohc=xUum0mmMzskAX9_qfuz&_nc_ht=scontent.fskg1-1.fna&oh=3ea1b2c671ab43de30c91d81a8a86b99&oe=5E9A5302" class="card-img-top" alt="...">
+                
+              </div>
+              <div class="col mb-3">
+                <img src="https://scontent.fskg1-1.fna.fbcdn.net/v/t1.0-9/90563740_2341504756156544_7943973662460215296_n.jpg?_nc_cat=108&_nc_sid=8024bb&_nc_ohc=q07VOXcZl5oAX-NCzpg&_nc_ht=scontent.fskg1-1.fna&oh=5b936e2bd67fbc737ccc07023a3793e8&oe=5E9A2066" class="card-img-top" alt="...">
+                
+              </div>
+              <div class="col mb-3">
+                <img src="https://scontent.fskg1-2.fna.fbcdn.net/v/t1.0-9/90471259_2341504759489877_4155036363848155136_n.jpg?_nc_cat=103&_nc_sid=8024bb&_nc_ohc=XFyDYTpWq54AX_bewm5&_nc_ht=scontent.fskg1-2.fna&oh=7fab9d200ef51d5d92ba2731e1aaf6fb&oe=5E9A1C0A" class="card-img-top" alt="...">
+                
+              </div>
+              <div class="col mb-3">
+                <img src="https://scontent.fskg1-2.fna.fbcdn.net/v/t1.0-9/90924817_2341504836156536_1046196059837038592_n.jpg?_nc_cat=100&_nc_sid=8024bb&_nc_ohc=wXeQOOA9RJkAX9Lyiw7&_nc_ht=scontent.fskg1-2.fna&oh=7eb87ea5e64e72e871d23f851b572d44&oe=5E9B259C" class="card-img-top" alt="...">
+                
+              </div>
+              <div class="col mb-3">
+                <img src="https://scontent.fskg1-1.fna.fbcdn.net/v/t1.0-9/90649386_2341504872823199_1576468626465095680_n.jpg?_nc_cat=108&_nc_sid=8024bb&_nc_ohc=ygkQVHdK738AX9sp4Cz&_nc_ht=scontent.fskg1-1.fna&oh=8e2c741042fb42d627c0f971d996c50f&oe=5E9BD9D8" class="card-img-top" alt="...">
+                
+              </div>
+              <div class="col mb-3">
+                <img src="https://scontent.fskg1-1.fna.fbcdn.net/v/t1.0-9/90466430_2341504899489863_27549706942939136_n.jpg?_nc_cat=110&_nc_sid=8024bb&_nc_ohc=nBZrFfXjYjYAX9HLVL6&_nc_ht=scontent.fskg1-1.fna&oh=2918b099bc45f02b17c8c920030a91f4&oe=5E993F19" class="card-img-top" alt="...">
+                
+              </div>
+              <div class="col mb-3">
+                <img src="https://scontent.fskg1-1.fna.fbcdn.net/v/t1.0-9/90392442_2341504949489858_1789667710662082560_n.jpg?_nc_cat=108&_nc_sid=8024bb&_nc_ohc=MUmuejp893kAX9a8bOm&_nc_ht=scontent.fskg1-1.fna&oh=f2ef4fa856c43ee6b217264fb56509ce&oe=5E9B8A16" class="card-img-top" alt="...">
+                
+              </div>
+              <div class="col mb-3">
+                <img src="https://scontent.fskg1-2.fna.fbcdn.net/v/t1.0-9/90749113_2341504962823190_2587758194302386176_n.jpg?_nc_cat=106&_nc_sid=8024bb&_nc_ohc=MElqimk0rzYAX8dLU-d&_nc_ht=scontent.fskg1-2.fna&oh=56b0c679738ab9355f88874b68fcb081&oe=5E99D1E2" class="card-img-top" alt="...">
+                
+              </div>
+              <div class="col mb-3">
+                <img src="https://scontent.fskg1-1.fna.fbcdn.net/v/t1.0-9/90527422_2341505022823184_3080663278439890944_n.jpg?_nc_cat=108&_nc_sid=8024bb&_nc_ohc=yYLEoOHad3QAX8cFPk7&_nc_ht=scontent.fskg1-1.fna&oh=6b96d4b594180266b248cd2a288a9a92&oe=5E9C2002" class="card-img-top" alt="...">
+                
+              </div>
+             
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-video" role="tabpanel"
+            aria-labelledby="pills-contact-tab">
+            
+            <div class="row row-cols-1 row-cols-md-2 mb-5">
+              <div class="col mb-4">                
+                  <iframe  class="card-img-top video" src="https://www.youtube.com/embed/C5r1PM99diA"> </iframe>               
+              </div>
+              <div class="col mb-4 video">                
+                <iframe class="card-img-top video"  src="https://www.youtube.com/embed/I-Yd-_XIWJg"></iframe>
+              </div>
+              
+            </div>
+          </div>
         </div>
-        
 
-        <div id="desenDiv">
 
-          <iframe width="300" height="200" src="https://www.youtube.com/embed/C5r1PM99diA"
-            style="margin-left: 20px; margin-top: 5px;display: flex;">
-          </iframe>
 
-          <iframe width="300" height="200" src="https://www.youtube.com/embed/I-Yd-_XIWJg"
-            style="margin-left: 20px; margin-top: 5px;display: flex;">
-          </iframe>
 
-        </div>
+
+
 
 
 

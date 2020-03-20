@@ -1,24 +1,4 @@
-#tableBody {
-    border-collapse: collapse; /* Collapse borders */
-    width: 100%; /* Full-width */
-    border: 1px solid black; /* Add a grey border */
-    font-size: 18px; /* Increase font-size */
-   
-  }
-  #tableBody th, #tableBody td {
-    text-align: left; /* Left-align text */
-    padding: 12px; /* Add padding */
-  }
-  #tableBody tr {
-    /* Add a bottom border to all table rows */
-    border-bottom: 1px solid #ddd;
-  }
-  
-  #tableBody tr.header, #tableBody tr:hover {
-    /* Add a grey background color to the table header and on hover */
-    background-color: #f1f1f1;
-  }  
-  body{
+body{
     background-color: white;
     font-family: 'Open Sans', sans-serif;
     margin: 0 auto;
@@ -64,12 +44,13 @@
     margin: 0 auto;
 }
 
-.simptomi{
+.navs{
     font-weight: 700;
-    font-size: xx-large;
+    font-size: 20px;
     color: indianred;
     margin-left: 20px;
 }
+
 
 .simptomiTekst{
     color: indianred;
@@ -84,12 +65,7 @@
     font-weight: 700;
 }
 
-.merki{
-    font-weight: 700;
-    font-size: xx-large;
-    color: indianred;
-    margin-left: 20px;
-}
+
 
 .merkiZaZastita{
     color: indianred;
@@ -105,4 +81,7 @@
 .nav-pills .nav-link  {
     background-color: white !important;
     color: indianred !important;
+}
+.video {
+    height: 300px;
 }

@@ -38,17 +38,32 @@ axios.get('https://covid-ca.azurewebsites.net/api/covid/countries', {
     {
         let tableBody = document.getElementById("tableBody");
             let newRow = document.createElement("tr");
-            let newCountry = document.createElement("td");
-            newCountry.innerHTML = data[i].country;
-            let newCases = document.createElement("td");
-            newCases.innerHTML = data[i].cases;
+            let country = document.createElement("td");
+            country.innerHTML = data[i].country;
+            let cases = document.createElement("td");
+            cases.innerHTML = data[i].cases;
             let deaths = document.createElement("td");
             deaths.innerHTML = data[i].deaths;
+            let todayCases = document.createElement("td");
+            todayCases.innerHTML = data[i].todayCases;
+            let recovered = document.createElement("td");
+            recovered.innerHTML = data[i].recovered;
+            let active = document.createElement("td");
+            active.innerHTML = data[i].active;
+            let todayDeaths = document.createElement("td");
+            todayDeaths.innerHTML = data[i].todayDeaths;
+            let critical = document.createElement("td");
+            critical.innerHTML = data[i].critical;
             
             tableBody.appendChild(newRow);
-            newRow.appendChild(newCountry);
-            newRow.appendChild(newCases);
+            newRow.appendChild(country);
+            newRow.appendChild(cases);
+            newRow.appendChild(todayCases);
             newRow.appendChild(deaths);
+            newRow.appendChild(todayDeaths);           
+            newRow.appendChild(recovered);
+            newRow.appendChild(active);
+            newRow.appendChild(critical);
         }
    
    
@@ -61,13 +76,15 @@ axios.get('https://covid-ca.azurewebsites.net/api/covid/countries', {
     let izleceni = northMacedonia.map(a => a.recovered);
     macedoniaRecovered.innerText = izleceni;
 
+    var macedoniaDeaths = document.getElementById("macedoniaDeaths");
+    let pocinati = northMacedonia.map(a => a.deaths);
+    macedoniaDeaths.innerText = pocinati;
+
     // var cifraNovi = document.getElementById("cifraNovi");
     // let novi = northMacedonia.map(a => a.todayCases);
     // cifraNovi.innerText = novi;
 
-    var macedoniaDeaths = document.getElementById("macedoniaDeaths");
-    let pocinati = northMacedonia.map(a => a.deaths);
-    macedoniaDeaths.innerText = pocinati;
+    
 
     // var izleceniProcent = document.getElementById("izleceniProcent");
     // izleceniProcent.innerText = ((izleceni/zaboleni) * 100).toFixed(2) + '%';
