@@ -34,18 +34,6 @@ body{
     padding: 20px;
 }
 
-.infoNumbers{
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-}
-
-.macedoniaNumbers.div{
-    display: inline-flex;
-    text-align: center;
-    margin: 0 auto;
-}
-
 .navs{
     font-weight: 700;
     font-size: 20px;
@@ -79,7 +67,8 @@ body{
 .video {
     height: 300px;
 }
-#tableBody tr.header, #tableBody tr:hover {
+
+#tableBody tr.tbHeader, #tableBody tr:hover {
     background-color: indianred;
     color: white;
     font-weight: bold;
