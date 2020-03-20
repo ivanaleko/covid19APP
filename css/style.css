@@ -4,6 +4,7 @@ body{
     margin: 0 auto;
     padding: 0;
     width: 80%;
+    height: 2000px;
 
 }
 
@@ -19,11 +20,12 @@ body{
     margin: 0 auto;
     color: white;
     background-color: indianred;
+    border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
 }
 
-.macedonia{
+.numbersTitle{
     margin: 0 auto;
     text-align: center;
     font-weight: 700;
@@ -32,7 +34,7 @@ body{
     padding: 20px;
 }
 
-.macedoniaNumbers{
+.infoNumbers{
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
@@ -52,7 +54,7 @@ body{
 }
 
 
-.simptomiTekst{
+.navText{
     color: indianred;
     margin-left: 20px;
 }
@@ -65,14 +67,6 @@ body{
     font-weight: 700;
 }
 
-
-
-.merkiZaZastita{
-    color: indianred;
-    margin-left: 20px;
-}
-
-
 .nav-pills .nav-link.active {
     background-color: indianred !important;
     color: white !important;
@@ -84,4 +78,23 @@ body{
 }
 .video {
     height: 300px;
+}
+#tableBody tr.header, #tableBody tr:hover {
+    background-color: indianred;
+    color: white;
+    font-weight: bold;
+  }
+.border{
+    border: white solid;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.prashanje{
+    font-weight: 700;
+}
+.picture{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }

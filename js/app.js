@@ -80,31 +80,32 @@ axios.get('https://covid-ca.azurewebsites.net/api/covid/countries', {
     let pocinati = northMacedonia.map(a => a.deaths);
     macedoniaDeaths.innerText = pocinati;
 
-    // var cifraNovi = document.getElementById("cifraNovi");
-    // let novi = northMacedonia.map(a => a.todayCases);
-    // cifraNovi.innerText = novi;
+    var macTodayCases = document.getElementById("macTodayCases");
+    let novi = northMacedonia.map(a => a.todayCases);
+    macTodayCases.innerText = novi;
 
-    
+    var macActive = document.getElementById("macActive");
+    let active = northMacedonia.map(a => a.active);
+    macActive.innerText = active;
 
-    // var izleceniProcent = document.getElementById("izleceniProcent");
-    // izleceniProcent.innerText = ((izleceni/zaboleni) * 100).toFixed(2) + '%';
+    var macCritical = document.getElementById("macCritical");
+    let critical = northMacedonia.map(a => a.critical);
+    macCritical.innerText = critical;
 
-    // var izleceniProcent = document.getElementById("izleceniProcent");
-    // smrtnostProcent.innerText = ((pocinati/izleceni) * 100).toFixed(2) + '%';
-
+  
    }).catch(error => {
     console.log(error);
 });
 
 function myFunction() {
-    // Declare variables
+    
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     table = document.getElementById("tableBody");
     tr = table.getElementsByTagName("tr");
-  
-    // Loop through all table rows, and hide those who don't match the search query
+        
+   
     for (i = 0; i < tr.length; i++) {
       td = tr[i].getElementsByTagName("td")[0];
       if (td) {
@@ -113,6 +114,7 @@ function myFunction() {
           tr[i].style.display = "";
         } else {
           tr[i].style.display = "none";
+         
         }
       }
     }
