@@ -44,12 +44,14 @@ axios.get('https://covid-ca.azurewebsites.net/api/covid/countries', {
             deaths.innerHTML = data[i].deaths;
             let todayCases = document.createElement("td");
             todayCases.innerHTML = data[i].todayCases;
+            todayCases.className ="todayTableRow";
             let recovered = document.createElement("td");
             recovered.innerHTML = data[i].recovered;
             let active = document.createElement("td");
             active.innerHTML = data[i].active;
             let todayDeaths = document.createElement("td");
             todayDeaths.innerHTML = data[i].todayDeaths;
+            todayDeaths.className ="todayTableRow";
             let critical = document.createElement("td");
             critical.innerHTML = data[i].critical;
 

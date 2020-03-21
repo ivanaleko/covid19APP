@@ -20,8 +20,8 @@ body{
     color: white;
     background-color: indianred;
     border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 30px;
+    padding: 20px;
+    
 }
 
 .numbersTitle{
@@ -30,7 +30,7 @@ body{
     font-weight: 700;
     font-size: xx-large;
     margin: 30xp;
-    padding: 20px;
+    padding: 10px;
 }
 
 .navs{
@@ -67,12 +67,11 @@ body{
     height: 300px;
 }
 
-.border{
-    border: white solid;
+.numberBorder{
+    border:2px white dashed ;
     padding: 10px;
     border-radius: 5px;
-    width: 150px;
-    height: 100px;
+    width: 150px;    
     text-align: center;
     margin: 15px;
 }
@@ -87,7 +86,7 @@ body{
 .allNumbers{
     font-size: x-large;
     font-weight: 900;
-    
+        
 }
 .picture{
     text-align: center;
@@ -96,7 +95,7 @@ body{
 }
 
 #worldTable tr.tbHeader, #worldTable tr:hover {
-    background-color: indianred;
+    background-color: #dcdcdc;
     color: white;
     font-weight: bold;
 }
@@ -116,4 +115,11 @@ body{
     padding: 5px;
     font-size: large;
     
+}
+#titlePicture {
+    width: 40%;
+    margin: 0 auto;
+}
+.todayTableRow{
+    color: indianred;
 }
