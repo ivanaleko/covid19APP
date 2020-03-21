@@ -28,113 +28,94 @@
         Во светот
       </div>
       <div class="row justify-content-around">
-        <div class="border mb-2">
-          Вкупно случаи
-          <div id="worldCases" style="text-align: center;">
-
-          </div>
+        <div class="border">
+          <div class="titleNumber">Вкупно случаи </div>
+          <div id="worldCases" class="allNumbers"></div>
         </div>
-        <div class="border mb-2">
-          Вкупно починати
-          <div id="worldDeaths" style="text-align: center;">
-
-          </div>
+        <div class="border">
+          <div class="titleNumber">Вкупно починати</div>
+          <div id="worldDeaths" class="allNumbers"></div>
         </div>
-        <div class="border mb-2">
-          Вкупно излечени
-          <div id="worldRecovered" style="text-align: center;">
-
-          </div>
+        <div class="border">
+          <div class="titleNumber">Вкупно излечени</div>
+          <div id="worldRecovered" class="allNumbers"></div>
         </div>
       </div>
-      <br>
+
       <div class="numbersTitle">
         Во Македонија
       </div>
       <div class="row justify-content-around">
-        <div class="border mb-2">
-          Вкупно случаи
-          <div id="macedoniaCases" style="text-align: center;">
-
-          </div>
+        <div class="border">
+          <div class="titleNumber"> Вкупно случаи</div>
+          <div id="macedoniaCases" class="allNumbers"></div>
         </div>
-        <div class="border mb-2">
-          Денешни случаи
-          <div id="macTodayCases" style="text-align: center;">
-
-          </div>
+        <div class="border">
+          <div class="titleNumber">Денешни случаи</div>
+          <div id="macTodayCases" class="allNumbers"></div>
         </div>
-        <div class="border mb-2">
-          Активни случаи
-          <div id="macActive" style="text-align: center;">
-
-          </div>
+        <div class="border">
+          <div class="titleNumber">Активни случаи</div>
+          <div id="macActive" class="allNumbers"></div>
         </div>
-        <div class="border mb-2">
-          Критични случаи
-          <div id="macCritical" style="text-align: center;">
-
-          </div>
+        <div class="border">
+          <div class="titleNumber">Критични случаи</div>
+          <div id="macCritical" class="allNumbers"></div>
         </div>
-        <div class="border mb-2">
-          Вкупно починати
-          <div id="macedoniaDeaths" style="text-align: center;">
-
-          </div>
+        <div class="border">
+          <div class="titleNumber">Вкупно починати</div>
+          <div id="macedoniaDeaths" class="allNumbers"></div>
         </div>
-        <div class="border mb-2">
-          Вкупно излечени
-          <div id="macedoniaRecovered" style="text-align: center;">
-
-          </div>
+        <div class="border">
+          <div class="titleNumber">Вкупно излечени </div>
+          <div id="macedoniaRecovered" class="allNumbers"></div>
         </div>
       </div>
     </div>
   </div>
-
-  <div id="navDiv">
+  <div id="navDiv" class="justify-content-around">
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active navs" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-          aria-controls="pills-home" aria-selected="true">Податоци</a>
+        <a class="nav-link active navs" id="pills-data-tab" data-toggle="pill" href="#pills-data" role="tab"
+          aria-controls="pills-data" aria-selected="true">Податоци</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link navs" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-          aria-controls="pills-profile" aria-selected="false">Симптоми</a>
+        <a class="nav-link navs" id="pills-symptoms-tab" data-toggle="pill" href="#pills-symptoms" role="tab"
+          aria-controls="pills-symptoms" aria-selected="false">Симптоми</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link navs" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-          aria-controls="pills-contact" aria-selected="false">Мерки за заштита</a>
+        <a class="nav-link navs" id="pills-prevention-tab" data-toggle="pill" href="#pills-prevention" role="tab"
+          aria-controls="pills-prevention" aria-selected="false">Мерки за заштита</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link navs" id="pills-sliki-tab" data-toggle="pill" href="#pills-sliki" role="tab"
-          aria-controls="pills-sliki" aria-selected="false">Само-изолација</a>
+        <a class="nav-link navs" id="pills-isolation-tab" data-toggle="pill" href="#pills-isolation" role="tab"
+          aria-controls="pills-isolation" aria-selected="false">Само-изолација</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link navs" id="pills-prasanja-tab" data-toggle="pill" href="#pills-prasanja" role="tab"
-          aria-controls="pills-prasanja" aria-selected="false">Чести прашања</a>
-      </li>      
+        <a class="nav-link navs" id="pills-question-tab" data-toggle="pill" href="#pills-question" role="tab"
+          aria-controls="pills-question" aria-selected="false">Чести прашања</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link navs" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab"
           aria-controls="pills-video" aria-selected="false">Видеа</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link navs" id="pills-kontakt-tab" data-toggle="pill" href="#pills-kontakt" role="tab"
+        <a class="nav-link navs" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
           aria-controls="pills-kontakt" aria-selected="false">Контакт</a>
       </li>
     </ul>
 
     <div class="tab-content align-middle " id="pills-tabContent">
-      <div class="tab-pane fade show active table-responsive-sm" id="pills-home" role="tabpanel"
-        aria-labelledby="pills-home-tab">
+      <div class="tab-pane fade show active table-responsive-sm" id="pills-data" role="tabpanel"
+        aria-labelledby="pills-data-tab">
         <div id="inputDiv">
-          <input id="myInput" type="text" onkeyup="myFunction()" placeholder="Пребарај по држава" name="search"
-            class="form-control mb-3 w-50">
+          <input id="myInput" type="text" onkeyup="filterTable()" placeholder="Пребарај по држава" name="search"
+            class="form-control mb-3 w-75">
         </div>
         <div class="table-responsive-sm">
-          <table id="tableBody" class="table align-middle mb-5 ">
-            <thead class="thead-dark align-middle">
-              <tr class="tbHeader">
+          <table id="worldTable" class="table mb-5">
+            <thead class="thead-dark tableHeader">
+              <tr scope="row" class="tbHeader">
                 <th scope="col">Држава</th>
                 <th scope="col">Заболени</th>
                 <th scope="col">Денешни Заболени</th>
@@ -145,11 +126,11 @@
                 <th scope="col">Критични</th>
               </tr>
             </thead>
+            <tbody id="tableBody"></tbody>
           </table>
         </div>
       </div>
-      
-      <div class="tab-pane fade navText mb-5" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+      <div class="tab-pane fade navText mb-5" id="pills-symptoms" role="tabpanel" aria-labelledby="pills-symptoms-tab">
         Најчести симптоми на COVID-19 се треска, замор и сува кашлица.
         Некои пациенти може да имаат болки, назална преоптовареност,
         течење на носот, болки во грлото или дијареја. Овие симптоми
@@ -162,10 +143,10 @@
         проблеми со срцето или дијабетес, имаат поголема веројатност да развијат
         сериозни заболувања. Луѓето со треска, кашлица и отежнато дишење треба
         да побараат лекарска помош.
-        
+
       </div>
-      <div class="tab-pane fade navText mb-5" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-        <div class="preporaka">
+      <div class="tab-pane fade navText mb-5" id="pills-prevention" role="tabpanel" aria-labelledby="pills-prevention-tab">
+        <div class="prevention">
           Секојдневно одземајќи човечки живот вирусот не запира, затоа мора да
           бидеме одговорни и да се придржуваме кон препораките на експертите.
         </div>
@@ -204,8 +185,8 @@
         установа.
         Ова исто така ќе ве заштити вас и ќе помогне да се спречи ширењето на вируси и други зарази.
       </div>
-      <div class="tab-pane fade navText mb-5" id="pills-prasanja" role="tabpanel" aria-labelledby="pills-prasanja-tab">
-        <div class="prashanje"> Само што се вратив од земја со COVID-19, што да правам?</div>
+      <div class="tab-pane fade navText mb-5" id="pills-question" role="tabpanel" aria-labelledby="pills-question-tab">
+        <div class="question"> Само што се вратив од земја со COVID-19, што да правам?</div>
         - Само-изолирајте се останувајќи дома ако почнете да се чувствувате лошо, дури и со благи симптоми како
         главоболка,
         треска со низок степен (37,3 Ц или погоре) и по малку течен нос, сè додека не закрепнете. Ако е од суштинско
@@ -217,26 +198,26 @@
         може да биде поради дишна зараза или друга сериозна состојба.
         Јавете се однапред и кажете му на вашиот лекар за било кои неодамнешни патувања или контакти со патници.
         <br><br>
-        <div class="prashanje"> Дали антибиотиците се ефикасни против COVID-19?</div>
+        <div class="question"> Дали антибиотиците се ефикасни против COVID-19?</div>
         - Не. Антибиотиците не делуваат против вируси, тие се потребни само за бактериски зарази. COVID-19 е
         предизвикана од вирус,
         па антибиотиците не функционираат. Антибиотиците не треба да се користат како средство за спречување или
         лечење на COVID-19.
         Тие треба да се користат само како што е наведено од лекар со цел лекување на бактериска зараза. <br><br>
-        <div class="prashanje"> Дали треба да носам маска за да се заштитам? </div>
+        <div class="question"> Дали треба да носам маска за да се заштитам? </div>
         - Носете маска само ако сте болни со симптоми на COVID-19 (особено кашлање) или ако се грижите за некој што
         може да има COVID-19.
         Маска за лицето со еднократна употреба може да се користи само еднаш. Ако не сте болни или не се грижите за
         некој кој е болен,
         тогаш само трошите маска. Има недостаток на маски во светски рамки, па СЗО ги повикува луѓето мудро ги
         користат маските. <br><br>
-        <div class="prashanje"> Колку трае периодот на инкубација за COVID-19?</div>
+        <div class="question"> Колку трае периодот на инкубација за COVID-19?</div>
         - „Период на инкубација“ значи времето помеѓу фаќање на вирусот и започнување на симптомите на болеста.
         Повеќето проценки на
         периодот на инкубација за COVID-19 се во опсег од 1-14 дена, најчесто околу пет дена. Овие проценки ќе бидат
         ажурирани,
         како што повеќе податоци стануваат достапни. <br><br>
-        <div class="prashanje"> Колку време вирусот преживува на површини? </div>
+        <div class="question"> Колку време вирусот преживува на површини? </div>
         - Не е сигурно колку долго вирусот што предизвикува COVID-19 преживува на површини, но се чини дека се
         однесува како и
         другите коронавируси. Студиите наговестуваат дека коронавирусите (вклучувајќи ги и прелиминарните информации
@@ -248,13 +229,13 @@
         за дезинфекција за да го убиете вирусот и да се заштитите себе си и другите. Исчистете си ги рацете со
         дезинфицирачи засновани на
         алкохол или измијте ги со сапун и вода. Избегнувајте допирање на очите, устата или носот. <br><br>
-        <div class="prashanje"> Дали е безбедно да се зема пакет испорачан од заразено место? </div>
+        <div class="question"> Дали е безбедно да се зема пакет испорачан од заразено место? </div>
         - Да. Веројатноста за заразено лице да зарази трговска стока е мала и ризикот од фаќање на вирусот што ја
         предизвикува COVID-19
         од пакет што е преместен, транспортиран и изложен на различни услови и температура, е исто така мала. <br><br>
 
       </div>
-      <div class="tab-pane fade navText" id="pills-sliki" role="tabpanel" aria-labelledby="pills-sliki-tab">
+      <div class="tab-pane fade navText" id="pills-isolation" role="tabpanel" aria-labelledby="pills-isolation-tab">
         <div class="row row-cols-1 row-cols-md-3 mb-5">
           <div class="col mb-3">
             <img
@@ -340,14 +321,11 @@
           </div>
         </div>
       </div>
-      <div class="tab-pane fade navText mt-5" id="pills-kontakt" role="tabpanel" aria-labelledby="pills-kontakt-tab">
+      <div class="tab-pane fade navText mt-5" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
         <div>
-
-          <img src="https://emagazin.mk/wp-content/uploads/2020/03/telefoni.jpg" class="w-50 h-80 picture" alt="...">
-
+          <img src="https://emagazin.mk/wp-content/uploads/2020/03/telefoni.jpg" class="w-75 h-100 picture" alt="...">
         </div>
-
-      </div>
+       </div>
     </div>
   </div>
 

@@ -1,42 +1,40 @@
 axios.get('https://covid-ca.azurewebsites.net/api/covid/overview', {
     headers: {
         'Content-Type': 'application/json',
-        'Accept' : 'application/json'
+        'Accept': 'application/json'
     }
 })
-.then((response)=> {
-    let data = JSON.parse(response.data);
-    console.log(data);
-    
-    var worldCases = document.getElementById("worldCases");
-    worldCases.innerHTML = data.cases;
+    .then((response) => {
+        let data = JSON.parse(response.data);
+        console.log(data);
 
-    var worldDeaths = document.getElementById("worldDeaths");
-    worldDeaths.innerHTML = data.deaths;
+        var worldCases = document.getElementById("worldCases");
+        worldCases.innerHTML = data.cases;
 
-    var worldRecovered = document.getElementById("worldRecovered");
-    worldRecovered.innerHTML = data.recovered;
-}).catch(error => {
-    console.log(error);
-});
+        var worldDeaths = document.getElementById("worldDeaths");
+        worldDeaths.innerHTML = data.deaths;
+
+        var worldRecovered = document.getElementById("worldRecovered");
+        worldRecovered.innerHTML = data.recovered;
+    }).catch(error => {
+        console.log(error);
+    });
 
 axios.get('https://covid-ca.azurewebsites.net/api/covid/countries', {
     headers: {
         'Content-Type': 'application/json',
-        'Accept' : 'application/json'
+        'Accept': 'application/json'
     }
 })
-.then((response)=> {
-    let data = JSON.parse(response.data);
-    console.log(data);
-    var northMacedonia = data.filter(function (item){
-        return item.country == "North Macedonia"
-    })
-    console.log(northMacedonia);
-    
-    for (var i in data) 
-    {
-        let tableBody = document.getElementById("tableBody");
+    .then((response) => {
+        let data = JSON.parse(response.data);
+        var northMacedonia = data.filter(function (item) {
+            return item.country == "North Macedonia"
+        })
+       
+        for (var i in data) {
+            let worldTable = document.getElementById("worldTable");
+            let tableBody = document.getElementById("tableBody");
             let newRow = document.createElement("tr");
             let country = document.createElement("td");
             country.innerHTML = data[i].country;
@@ -54,69 +52,70 @@ axios.get('https://covid-ca.azurewebsites.net/api/covid/countries', {
             todayDeaths.innerHTML = data[i].todayDeaths;
             let critical = document.createElement("td");
             critical.innerHTML = data[i].critical;
-            
+
+            worldTable.appendChild(tableBody);
             tableBody.appendChild(newRow);
             newRow.appendChild(country);
             newRow.appendChild(cases);
             newRow.appendChild(todayCases);
             newRow.appendChild(deaths);
-            newRow.appendChild(todayDeaths);           
+            newRow.appendChild(todayDeaths);
             newRow.appendChild(recovered);
             newRow.appendChild(active);
             newRow.appendChild(critical);
         }
-   
-   
-    
-    var macedoniaCases = document.getElementById("macedoniaCases");
-    let zaboleni = northMacedonia.map(a => a.cases);
-    macedoniaCases.innerText = zaboleni;
 
-    var macedoniaRecovered = document.getElementById("macedoniaRecovered");
-    let izleceni = northMacedonia.map(a => a.recovered);
-    macedoniaRecovered.innerText = izleceni;
 
-    var macedoniaDeaths = document.getElementById("macedoniaDeaths");
-    let pocinati = northMacedonia.map(a => a.deaths);
-    macedoniaDeaths.innerText = pocinati;
 
-    var macTodayCases = document.getElementById("macTodayCases");
-    let novi = northMacedonia.map(a => a.todayCases);
-    macTodayCases.innerText = novi;
+        var macedoniaCasesDiv = document.getElementById("macedoniaCases");
+        let macedoniaCases = northMacedonia.map(a => a.cases);
+        macedoniaCasesDiv.innerText = macedoniaCases;
 
-    var macActive = document.getElementById("macActive");
-    let active = northMacedonia.map(a => a.active);
-    macActive.innerText = active;
+        var macedoniaRecoveredDiv = document.getElementById("macedoniaRecovered");
+        let macedoniaRecovered = northMacedonia.map(a => a.recovered);
+        macedoniaRecoveredDiv.innerText = macedoniaRecovered;
 
-    var macCritical = document.getElementById("macCritical");
-    let critical = northMacedonia.map(a => a.critical);
-    macCritical.innerText = critical;
+        var macedoniaDeathsDiv = document.getElementById("macedoniaDeaths");
+        let macedoniaDeaths = northMacedonia.map(a => a.deaths);
+        macedoniaDeathsDiv.innerText = macedoniaDeaths;
 
-  
-   }).catch(error => {
-    console.log(error);
-});
+        var macTodayCasesDiv = document.getElementById("macTodayCases");
+        let macTodayCases = northMacedonia.map(a => a.todayCases);
+        macTodayCasesDiv.innerText = macTodayCases;
 
-function myFunction() {
-    
+        var macActiveDiv = document.getElementById("macActive");
+        let macActive = northMacedonia.map(a => a.active);
+        macActiveDiv.innerText = macActive;
+
+        var macCriticalDiv = document.getElementById("macCritical");
+        let macCritical = northMacedonia.map(a => a.critical);
+        macCriticalDiv.innerText = macCritical;
+
+
+    }).catch(error => {
+        console.log(error);
+    });
+
+function filterTable() {
+
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    table = document.getElementById("tableBody");
+    table = document.getElementById("worldTable");
     tr = table.getElementsByTagName("tr");
-        
-   
+
+
     for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-         
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+
+            }
         }
-      }
     }
-  }
+}
 

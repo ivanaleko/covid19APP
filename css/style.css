@@ -5,7 +5,6 @@ body{
     padding: 0;
     width: 80%;
     height: 2000px;
-
 }
 
 .header{
@@ -41,13 +40,12 @@ body{
     margin-left: 20px;
 }
 
-
 .navText{
     color: indianred;
     margin-left: 20px;
 }
 
-.preporaka{
+.prevention{
     color: indianred;
     margin: 0 auto;
     padding: 20px;
@@ -64,26 +62,58 @@ body{
     background-color: white !important;
     color: indianred !important;
 }
+
 .video {
     height: 300px;
 }
 
-#tableBody tr.tbHeader, #tableBody tr:hover {
-    background-color: indianred;
-    color: white;
-    font-weight: bold;
-  }
 .border{
     border: white solid;
     padding: 10px;
     border-radius: 5px;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    margin: 15px;
 }
 
-.prashanje{
+.titleNumber{         
+    height: 50px;   
+    text-align: center;
+}
+.question{
     font-weight: 700;
+}
+.allNumbers{
+    font-size: x-large;
+    font-weight: 900;
+    
 }
 .picture{
     text-align: center;
     display: block;
     margin: 0 auto;
+}
+
+#worldTable tr.tbHeader, #worldTable tr:hover {
+    background-color: indianred;
+    color: white;
+    font-weight: bold;
+}
+.tbHeader {
+    display:block;
+}
+
+#tableBody {
+    display:block;
+    height:500px;
+    width: 100%;
+    overflow: auto;
+}
+#worldTable td, #worldTable th{
+    width: 15%;
+    vertical-align: middle;
+    padding: 5px;
+    font-size: large;
+    
 }
